@@ -1,0 +1,115 @@
+<div class="container">
+<div class="d-flex justify-content-center">
+  <div class="p-2 shadow-lg p-3 mb-5 bg-white rounde" style="margin-top: 50px">
+    <h2 class="display-4">
+      Crear-Jugador
+    </h2>
+<form
+  #formularioCrear="ngForm"
+  (ngSubmit)="crearJugador()"
+>
+  <div class="d-flex">
+    <div class="form-group p-2">
+      <label for="ncamiseta">Número Camiseta</label>
+      <input
+        type="number"
+        [(ngModel)]="ncamiseta"
+        id="ncamiseta"
+        name="ncamiseta"
+        required
+        #vtNombreC="ngModel"
+        class="form-control"
+      >
+    </div>
+    <div class="form-group p-2">
+      <label for="nombreCamiseta">Nombre Camiseta</label>
+      <input
+        type="text"
+        [(ngModel)]="nombreCamiseta"
+        id="nombreCamiseta"
+        name="nombreCamiseta"
+        required
+        #vtNombreJ="ngModel"
+        class="form-control"
+      >
+    </div>
+    <div class="form-group p-2">
+      <label for="fechaIngreso">Fecha de ingreso</label>
+      <input
+        type="date"
+        [(ngModel)]="fechaIngreso"
+        id="fechaIngreso"
+        name="fechaIngreso"
+        required
+        #vtNombreF="ngModel"
+        class="form-control"
+      >
+    </div>
+  </div>
+
+  <div class="d-flex">
+    <div class="form-group p-2 flex-fill bd-highlight">
+      <label for="nombreCompletoJugador">Nombre Jugador</label>
+      <input
+        type="text"
+        id="nombreCompletoJugador"
+        name="nombreCompletoJugador"
+        [(ngModel)]="nombreCompletoJugador"
+        required
+        #vtNombreCom="ngModel"
+        class="form-control"
+      >
+    </div>
+  </div>
+
+  <div class="d-flex">
+    <div class="form-group p-2">
+      <label for="poderEspecial">Poder especial</label>
+      <input
+        type="text"
+        [(ngModel)]="poderEspecial"
+        id="poderEspecial"
+        name="poderEspecial"
+        required
+        #vtNombreP="ngModel"
+        class="form-control"
+      >
+    </div>
+
+    <div class="form-group p-2">
+      <label for="goles">Goles</label>
+      <input
+        [(ngModel)]="goles"
+        type="number"
+        id="goles"
+        name="goles"
+        required
+        #vtNombreG="ngModel"
+        class="form-control"
+      >
+    </div>
+    <div class="form-group p-2">
+      <label for="precio">Precio</label>
+      <input
+        [(ngModel)]="precioJugador"
+        type="number"
+        id="precio"
+        name="precio"
+        required
+        #vtNombreG="ngModel"
+        class="form-control"
+      >
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center">
+      <div class="p-2">
+          <button type="submit" class="btn btn-success" [disabled]="formularioCrear.invalid"
+
+          >Crear</button>
+      </div>
+  </div>
+</form>
+  </div>
+</div>
+</div>
