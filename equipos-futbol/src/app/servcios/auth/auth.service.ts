@@ -14,7 +14,6 @@ export class AuthService {
       const url = ['/home'];
       this.cajero = usuario;
       this._router.navigate(url);
-
       return true;
   }
 }

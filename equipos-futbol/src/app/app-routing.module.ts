@@ -42,7 +42,7 @@ const routes: Routes = [
     component:JugadorComponent,
     canActivate:[
       EstaLogeadoGuard
-    ],
+    ],/*
     children:[
       {
         path:'crear',
@@ -51,9 +51,15 @@ const routes: Routes = [
           EstaLogeadoGuard
         ]
       },
+    ]*/
+  },
+  {
+    path:'crear/:idEquipo',
+    component:CrearJugadorComponent,
+    canActivate:[
+      EstaLogeadoGuard
     ]
   },
-
 
   {
     path:'compras',
@@ -71,7 +77,7 @@ const routes: Routes = [
   },
   {
     path:'',
-    redirectTo:'home',
+    redirectTo:'',
     pathMatch:'full'
   },
   {

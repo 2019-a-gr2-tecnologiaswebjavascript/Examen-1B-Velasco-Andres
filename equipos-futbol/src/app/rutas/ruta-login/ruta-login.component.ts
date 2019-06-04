@@ -10,6 +10,7 @@ export class RutaLoginComponent implements OnInit {
 
   ngOnInit() {
   }
+
   nombre:string;
   constructor(private readonly _authService:AuthService){}
 
